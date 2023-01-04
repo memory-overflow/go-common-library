@@ -1,11 +1,7 @@
 # http 最常用的 json 协议调用封装
-- json_post.go: JsonPost。
-- json_get.go: JsonGet。
-- json_put.go: JsonPut。
-- json_delete.go: JsonDelete。
+4个方法, JsonPost、JsonGet、JsonPut、JsonDelete。
 
-
-example: https://github.com/memory-overflow/go-common-library/httpcall/httpcall_test.go
+example: [httpcall_test.go](https://github.com/memory-overflow/go-common-library/blob/main/httpcall/httpcall_test.go)
 ```go
 import (
 	"context"
