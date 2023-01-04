@@ -45,7 +45,7 @@ func traverseMap(mp map[string]interface{}) (res map[string]interface{}) {
 	return res
 }
 
-// FoldLog 折叠log中的长数据，比如图片 base64 等等
+// FoldLog 折叠 json log 中的长数据，比如图片 base64 等等
 func FoldLog(content []byte) string {
 	data := gjson.ParseBytes(content).Map()
 	mp := map[string]interface{}{}

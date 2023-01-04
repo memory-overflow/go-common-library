@@ -29,7 +29,7 @@ func (GoroutineHelp) Recover(recoverFunc RecoverFunc) error {
 // GoroutinFunc ...
 type GoroutinFunc func()
 
-// SafeGo 安全启用携程，捕获 crash，并且重试
+// SafeGo 安全启用携程，捕获 crash，并且重试。recover 表示捕获到异常的情况下是否需要重新开启新的携程。
 func (help GoroutineHelp) SafeGo(goFunc GoroutinFunc, recover bool) {
 	go func() {
 		var recoverFunc RecoverFunc = nil

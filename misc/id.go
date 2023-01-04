@@ -13,7 +13,7 @@ import (
 type IDGenerator struct {
 }
 
-// GenerateRandomString 生成随机字符串
+// GenerateRandomString 生成随机字符串, alphanum 字符集，nil 使用默认字符集。
 func (gen IDGenerator) GenerateRandomString(length int, alphanum []byte) string {
 	if alphanum == nil {
 		alphanum = []byte("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
