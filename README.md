@@ -1,0 +1,35 @@
+# GO library
+- client：调用第三方服务的客户端。
+  - ti: ti 平台客户端。
+    - ti3.4
+    - ti3.7
+- httpcall：http 调用的封装。
+  - json_post.go: JsonPost。
+  - json_get.go: JsonGet。
+  - json_put.go: JsonPut。
+  - json_delete.go: JsonDelete。
+- misc：常用的公共函数库
+  - time_related：时间相关的函数
+    - time_tick.go: TimeTick -- 计时器。
+    - timed.go: Timed -- 函数计时调用。
+  - goroutine_help.go：
+    - GoroutineHelp.Recoverd：协程 recover。
+    - GoroutineHelp.SafeGo：安全的 go。
+  - retry.go： Retry -- 带重试调用。
+  - id.go：
+    - GenerateRandomString：生成随机字符串。
+    - GenerateUUID：生成UUID。
+    - BighumpToUnderscore：大驼峰参数转换成下划线。
+    - UnderscoreToBighump：下划线参数转换成大驼峰。
+  - log.og
+    - FoldLog: 折叠日志中数据过长的字段，仅支持 json。
+- stl_extension：stl 的扩展
+  - limit_waitgroup.go：LimitWaitGroup -- 对于系统 WaitGroup 的扩展，支持 limit 并发限制并且阻塞。
+  - ordered_map.go：OrderedMap -- 实现了 c++ 中的排序 map，可以按照顺序遍历所有元素。
+- text: 文本处理相关方法
+  - aho_automaton.go：ac 自动机，多模式串快速匹配。在一个文本中找出来，出现过哪些字符串子串以及其定位。可以理解对同一文本 s 多次调用 strings.Contains(s, xxx) 的加速。
+    - BuildAcTrie: 构建自动机。
+    - AcTrie.Search: 匹配。
+  - edit_distance.go：
+    - Levenshtein：文本编辑距离。
+    - TextSim：计算两个文本的相似度。
