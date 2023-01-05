@@ -7,10 +7,13 @@ func SliceSame(a, b []string) bool {
 	if len(a) != len(b) {
 		return false
 	}
-	sort.Strings(a)
-	sort.Strings(b)
-	for i := 0; i < len(a); i++ {
-		if a[i] != b[i] {
+	tmpa, tempb := []string{}, []string{}
+	copy(tmpa, a)
+	copy(tempb, b)
+	sort.Strings(tmpa)
+	sort.Strings(tempb)
+	for i := 0; i < len(tmpa); i++ {
+		if tmpa[i] != tempb[i] {
 			return false
 		}
 	}

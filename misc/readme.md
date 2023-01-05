@@ -13,7 +13,7 @@
 - TimeTick —— 计时器，通过 TimeTick.Tick() 打点计时间，返回距离上一次 Tick 过去的时间，单位 ms。
 - Timed —— 函数调用计时。
 
-example:
+example: [TestTimeRelated](https://github.com/memory-overflow/go-common-library/blob/main/misc/time_related/time_test.go#L15)
 ```go
 import (
 	"testing"
@@ -51,7 +51,7 @@ func TestTimeRelated(t *testing.T) {
 - DownloadFile 下载网络文件
 - DownloadFileWithLimit 下载网络文件（带文件大小限制）
 
-example: 
+example: [TestDownload](https://github.com/memory-overflow/go-common-library/blob/main/misc/misc_test.go#L13)
 ```go
 import (
 	"context"
@@ -88,8 +88,7 @@ func TestDownload(t *testing.T) {
     - GoroutineHelp.Recoverd：协程 recover 处理函数。
     - GoroutineHelp.SafeGo：安全的启用携程。
   
-example:
-
+example: [TestGoroutineHelp](https://github.com/memory-overflow/go-common-library/blob/main/misc/misc_test.go#L35)
 ```go
 import (
 	"context"
@@ -137,7 +136,7 @@ IDGenerator 对象封装了很多生成 id 的函数。
 ## log
 - FoldLog: 折叠日志中数据过长的字段，输入仅支持 json 字符串。
 
-example:
+example: [TestFlodLog](https://github.com/memory-overflow/go-common-library/blob/main/misc/misc_test.go#L52)
 ```go
 import (
 	"context"

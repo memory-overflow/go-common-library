@@ -6,7 +6,7 @@
   - [任务调度模块](#任务调度模块)
 
 # go common library
-本仓库整理了 golang 中最常用的代码、函数、和模块。
+本库整理了 golang 中最常用的代码、函数、和模块，避免新项目总是重复造基础代码的轮子。
 
 ## httpcall 模块
 常用的简单 http 调用的封装。
@@ -25,10 +25,11 @@
 详见[stl_extension 模块说明](https://github.com/memory-overflow/go-common-library/blob/main/stl_extension/readme.md)。
 
 ## text 模块
-常用文本处理相关方法。
+常用文本处理算法。
 - AcTrie：ac 自动机，多模式串快速匹配。在一个文本中快速找出来出现过哪些字符串子串以及其定位。可以理解对同一文本 s 多次调用 strings.Contains(s, xxx) 的加速。
 - Levenshtein：计算文本编辑距离。
 - TextSim：计算两个文本的相似度。
+- SliceSame：判断两个字符串数组是否相同。
 
 
 详见[text 模块说明](https://github.com/memory-overflow/go-common-library/blob/main/text/readme.md)。

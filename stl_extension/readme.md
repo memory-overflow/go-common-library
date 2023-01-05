@@ -38,13 +38,17 @@ group.Wait()
 ```
 
 ## OrderedMap
-golang stl 原生的 map 是基于 hash 的无需 map，OrderedMap 是对 hash map 的补充。支持按照 key 顺序遍历。
+golang stl 原生的 map 是基于 hash 的无序 map，OrderedMap 是对 hash map 的补充。支持按照 key 顺序遍历。
+
 OrderedMap 使用 avl 树实现，是线程安全的。
+
 和 c++ map 对比测试，1000 万的随机的增删查操作：
 OrderedMap: 21806 ms, c++ map: 11592ms，效率比 c++ map 慢两倍。
 next 遍历整个 map, OrderedMap: 676ms, c++ map: 171ms；
 prev 遍历整个 map, OrderedMap: 663ms, c++ map: 198ms；
 遍历的效率大概比 c++ map 的慢三倍。
+
+c++ map 用红黑树实现，在随机数据上表现会比 avl 树要好。avl 树深度会比红黑树低一点，查询效率比较高。但是插入的效率没有红黑树高。
 
 用法：
 - 构建
