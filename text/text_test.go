@@ -30,5 +30,6 @@ func TestSliceSmae(t *testing.T) {
 	a := []string{"3", "2", "1"}
 	same := text.SliceSame(a, a)
 	t.Logf("is same: %v", same)
+	// test can not change order of a
 	t.Log(a)
 }

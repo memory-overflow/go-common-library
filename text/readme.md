@@ -12,7 +12,7 @@ text模块提供了一些字符串处理相关的算法能力。
 ## SliceSame
 - SliceSame——判断两个字符串数字是否相同。
 
-example: [TestTextSim](https://github.com/memory-overflow/go-common-library/blob/main/text/text_test.go#L29)
+example: [TestSliceSmae](https://github.com/memory-overflow/go-common-library/blob/main/text/text_test.go#L29)
 ```go
 import (
   "testing"
@@ -20,9 +20,12 @@ import (
   "github.com/memory-overflow/go-common-library/text"
 )
 
-func TestTextSim(t *testing.T) {
-	sim := text.TextSim("编辑距离测试", "测试一下距离")
-  t.Logf("sim: %f", sim)
+func TestSliceSmae(t *testing.T) {
+	a := []string{"3", "2", "1"}
+	same := text.SliceSame(a, a)
+	t.Logf("is same: %v", same)
+  // test can not change order of a
+	t.Log(a)
 }
 ```
 
@@ -56,7 +59,7 @@ func TestActrie(t *testing.T) {
 ## 计算文本编辑距离
 编辑距离(Edit Distance)：是一个度量两个字符序列之间差异的字符串度量标准，两个单词之间的编辑距离是将一个单词转换为另一个单词所需的单字符编辑（插入、删除或替换）的最小数量。一般来说，编辑距离越小，两个串的相似度越大。
 
-example: [TestActrie](https://github.com/memory-overflow/go-common-library/blob/main/text/text_test.go#L24)
+example: [TestLevenshtein](https://github.com/memory-overflow/go-common-library/blob/main/text/text_test.go#L24)
 ```go
 import (
   "testing"

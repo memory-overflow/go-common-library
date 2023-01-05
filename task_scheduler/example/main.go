@@ -33,7 +33,7 @@ func main() {
 		case <-c:
 			return
 		default:
-			container.AddTask(context.Background(),
+			sch.AddTask(context.Background(),
 				framework.Task{
 					TaskId: strconv.Itoa(i),
 					TaskItem: task.ExampleTask{
