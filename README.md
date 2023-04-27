@@ -2,11 +2,12 @@
   - [httpcall 模块](#httpcall-模块)
   - [misc 模块](#misc-模块)
 
+
+# go common library
+本库整理了 golang 中最常用的代码、函数、和模块，避免新项目总是重复造基础代码的轮子。
 ```
 go get github.com/memory-overflow/go-common-library
 ```
-# go common library
-本库整理了 golang 中最常用的代码、函数、和模块，避免新项目总是重复造基础代码的轮子。
 
 ## httpcall 模块
 常用的简单 http 调用的封装。
